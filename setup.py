@@ -21,7 +21,7 @@ setup(
     keywords="version versioning semver",
     python_requires=">=3.5",
     packages=["verbump"],
-    entry_points={"console_scripts": ["verbump = verbump:main"]},
+    entry_points={"console_scripts": ["verbump = verbump"]},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
