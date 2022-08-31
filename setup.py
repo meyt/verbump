@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 def read_version():
@@ -20,7 +20,7 @@ setup(
     license="MIT",
     keywords="version versioning semver",
     python_requires=">=3.5",
-    packages=find_packages(),
+    packages=["verbump"],
     entry_points={"console_scripts": ["verbump = verbump:main"]},
     classifiers=[
         "Development Status :: 3 - Alpha",
