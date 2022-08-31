@@ -7,7 +7,7 @@ import configparser
 
 from os.path import abspath, join
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 
 class Version:
