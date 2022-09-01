@@ -15,7 +15,7 @@ pip install verbump
 
 ## Usage
 
-1. Create `.verbump.ini` inside your project's root directory and put the configuration inside it.
+1. Create the configuration file `.verbump.ini` inside your project's root directory.
 2. Run `verbump`
 
 ```bash
