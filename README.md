@@ -1,5 +1,7 @@
 # verbump
 
+[![pypi](https://img.shields.io/pypi/pyversions/verbump.svg)](https://pypi.python.org/pypi/verbump)
+
 Easy version incrementing CLI tool.
 
 * Automatic relative version bump
