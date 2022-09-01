@@ -2,9 +2,9 @@
 
 Easy version incrementing CLI tool.
 
-* Automatic relative version detect and bump
+* Automatic relative version bump
 * Automatic `git commit` and `git tag`
-* Regex based configuration
+* Regex based version pattern
 * Using `semver` style
 
 ## Installation
@@ -18,7 +18,7 @@ pip install verbump
 1. Create `.verbump.ini` inside your project's root directory and put the configuration inside it.
 2. Run `verbump`
 
-```
+```bash
 verbump [major|minor|patch|build]
 ```
 
@@ -27,6 +27,16 @@ verbump [major|minor|patch|build]
 ```bash
 verbump minor
 ```
+
+## Configuration
+
+Available keys for `.verdump.ini` :
+
+* `pattern`: {string} Version pattern regex (required)
+* `commit`: {boolean} Enables git auto-commit
+* `tag`: {boolean} Enables git auto-tag
+* `commit_format`: {string} Auto-commit message format. default is `v%s`
+* `tag_format`: {string} Auto-tag name format. default is `v%s`
 
 ## Configuration samples
 
@@ -37,7 +47,7 @@ verbump minor
 pattern = (\d+.\d+.\d+(?:.\d+)?)*
 ```
 
-### Generic `VERSION` file + GIT auto-commit & auto-tag:
+### Generic `VERSION` file, git auto-commit & auto-tag enabled:
 
 ```ini
 [file:VERSION]

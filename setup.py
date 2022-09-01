@@ -1,17 +1,17 @@
 from setuptools import setup
 
 
-def read_version():
+def read_version(module_name):
     from re import match, S
     from os.path import join, dirname
 
-    f = open(join(dirname(__file__), "verbump.py"))
+    f = open(join(dirname(__file__), module_name, "__init__.py"))
     return match(r".*__version__ = (\"|')(.*?)('|\")", f.read(), S).group(2)
 
 
 setup(
     name="verbump",
-    version=read_version(),
+    version=read_version("verbump"),
     description="Easy version incrementing CLI tool",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -21,7 +21,7 @@ setup(
     keywords="version versioning semver",
     python_requires=">=3.5",
     packages=["verbump"],
-    entry_points={"console_scripts": ["verbump = verbump"]},
+    entry_points={"console_scripts": ["verbump = verbump.cli:main"]},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
